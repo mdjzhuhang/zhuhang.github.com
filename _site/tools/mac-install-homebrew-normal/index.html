@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!-- 文章内容模版 -->
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<title>Mac上安装homebrew</title>
+<meta name="description" content="">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="/assets/icon/manifest.json">
+<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+</head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/" class="logo">FE Notes</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+  <li class=""><a href="/">Home</a></li>
+  <li class=""><a href="/docs/">Docs</a></li>
+  <li class=""><a href="/demos/">Demos</a></li>
+  <li class=""><a href="/frontend/">front-end</a></li>
+  <li class=" active "><a href="/tools/">tools</a></li>
+  <li class=""><a href="/backend/">back-end</a></li>
+  <li class=""><a href="/others/">others</a></li>
+</ul>
+
+        <ul class="icons"><li><a href="https://instagram.com/default" class="icon fa-instagram" rel="nofollow"><span
+                    class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section class="post">
+            <header class="major">
+                <span class="date">01 Feb 2018</span>
+                <h1>Mac上安装homebrew</h1>
+                <p>homebrew是osx的软件管理工具，rvm install时依赖homebrew</p>
+            </header>
+            <div class="image main"><img src="" alt=""></div>
+            <p><h2 id="官方安装命令">官方安装命令</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+</div>
+
+<h2 id="使用镜像安装">使用镜像安装</h2>
+<p>网络太慢，git fetch… 报错，下载安装homebrew超时，所以使用镜像安装。</p>
+
+<p>homebrew主要分两部分：git repo（位于GitHub）和二进制bottles（位于bintray），这两者在国内访问都不太顺畅。可以替换成国内的镜像</p>
+
+<p>获取install文件</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>cd ~
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install &gt;&gt; brew_install
+</code></pre>
+</div>
+
+<p>编辑install文件，注释／替换 <code class="highlighter-rouge">BREW_REPO</code>和<code class="highlighter-rouge">CORE_TAP_REPO</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby</span>
+<span class="c1"># This script installs to /usr/local only. To install elsewhere you can just</span>
+<span class="c1"># untar https://github.com/Homebrew/brew/tarball/master anywhere you like or</span>
+<span class="c1"># change the value of HOMEBREW_PREFIX.</span>
+<span class="no">HOMEBREW_PREFIX</span> <span class="o">=</span> <span class="s2">"/usr/local"</span><span class="p">.</span><span class="nf">freeze</span>
+<span class="no">HOMEBREW_REPOSITORY</span> <span class="o">=</span> <span class="s2">"/usr/local/Homebrew"</span><span class="p">.</span><span class="nf">freeze</span>
+<span class="no">HOMEBREW_CACHE</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="no">ENV</span><span class="p">[</span><span class="s2">"HOME"</span><span class="p">]</span><span class="si">}</span><span class="s2">/Library/Caches/Homebrew"</span><span class="p">.</span><span class="nf">freeze</span>
+<span class="no">HOMEBREW_OLD_CACHE</span> <span class="o">=</span> <span class="s2">"/Library/Caches/Homebrew"</span><span class="p">.</span><span class="nf">freeze</span>
+<span class="c1"># BREW_REPO = "https://github.com/Homebrew/brew".freeze</span>
+<span class="no">BREW_REPO</span> <span class="o">=</span> <span class="s2">"git://mirrors.ustc.edu.cn/brew.git"</span><span class="p">.</span><span class="nf">freeze</span>
+<span class="c1"># CORE_TAP_REPO = "https://github.com/Homebrew/homebrew-core".freeze</span>
+<span class="no">CORE_TAP_REPO</span> <span class="o">=</span> <span class="s2">"git://mirrors.ustc.edu.cn/homebrew-core.git"</span><span class="p">.</span><span class="nf">freeze</span>
+</code></pre>
+</div>
+
+<p>安装homebrew：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /usr/bin/ruby ~/brew_install
+</code></pre>
+</div>
+
+<p>中途可能Tapping homebrew/core，下载超时，此时已经可以使用brew命令</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ brew -v
+Homebrew 1.5.4
+Homebrew/homebrew-core N/A
+</code></pre>
+</div>
+
+<p>使用<code class="highlighter-rouge">brew doctor</code>检查homebrew，各模块是否正常。此时会重新<code class="highlighter-rouge">tapping homebrew/core</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Warning: Suspicious Homebrew/brew git origin remote found.
+</code></pre>
+</div>
+<p>是因为源是镜像，所以警告不安全</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Warning: Unbrewed header files were found in /usr/local/include.
+</code></pre>
+</div>
+<p>是因为node不是用brew安装的，可以卸载node，重新安装</p>
+
+</p>
+        </section>
+
+        <div class="comments-wrapper">
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+
+                var disqus_config = function() {
+                    this.page.url = '/tools/mac-install-homebrew-normal/';
+                    /*Replace PAGE_URL with your page's canonical URL variable*/
+                    this.page.identifier = '/tools/mac-install-homebrew-normal/';
+                    /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                };
+
+                (function() {  /* dont endit below this line */
+                    var d = document, s = d.createElement('script');
+
+                    s.src = 'https://default.disqus.com/embed.js';
+
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+                powered by Disqus.</a></noscript>
+        </div><!-- /.comments-wrapper -->
+
+
+        <!-- Footer -->
+        <footer>
+            <ul class="actions">
+                <li><a href="/" class="button">Home</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Footer -->
+    <!--<footer id="footer">
+  <section>
+    <form method="POST" action="https://formspree.io/">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3"></textarea>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message" /></li>
+      </ul>
+    </form>
+  </section>
+  <section class="split contact">
+    <section class="alt">
+      <h3>Location</h3>
+      <p>china</p>
+    </section>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="tel:"></a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:"></a></p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="https://twitter.com/default" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+        <li><a href="https://facebook.com/default" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+        <li><a href="https://instagram.com/default" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section>
+  </section>
+</footer>-->
+<!-- Copyright -->
+<div id="copyright">
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://somiibo.com">Somiibo</a></li></ul>
+</div>
+
+
+</div>
+
+<!-- Scripts -->
+<!-- DYN -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'default');
+</script>
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 # Site
 title:              FE Notes
 bio:                'A FE notes website'
-description:        "Jekyll version of the Massively theme by HTML5UP"
+description:        "My FE notes"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
@@ -11,12 +11,12 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/:categories/:title/"
+    permalink: "/:title/"
     layout: post
     author:
 
 # Jekyll
-permalink:          /blog/:title/
+permalink:          /:categories/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -54,7 +54,7 @@ gems:
   - jekyll-paginate
 
 paginate: 6
-paginate_path: "/:categories/page:num/"
+paginate_path: "/page:num/"
 
 jekyll-mentions:
     base_url: https://github.com

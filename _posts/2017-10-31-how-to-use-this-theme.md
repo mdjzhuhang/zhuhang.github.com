@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "test docs"
-date:   2017-10-31
-excerpt: "Huge thanks to HTML5 UP for making this awesome template! Let's see what it can do"
-image: "/images/pic02.jpg"
+title: The Jekyll Theme!
+date: 2017-10-31
+excerpt: jekyll theme 使用方式
 category: docs
 ---
 
@@ -22,7 +21,6 @@ The sitemap is auto generated! Just simply change the front matter of each site.
 ```
 sitemap:
     priority: 0.7
-    lastmod: 2017-11-02
     changefreq: weekly
 ```
 ### Formspring integration

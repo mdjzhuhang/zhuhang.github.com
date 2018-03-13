@@ -1,24 +1,11 @@
 ---
 layout: null
 title: Jekyll Theme - Home Page - Massively
-description: Every great website starts with a great homepage. The homepage tells your viewers what your site is all about and gives your viewers a place to come back to.
-sitemap:
-priority: 1.0
-lastmod: 2017-11-02
-changefreq: weekly
 ---
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     {% include head.html %}
-
-
 </head>
 <body class="is-loading">
 
@@ -28,11 +15,8 @@ changefreq: weekly
     <!-- Intro -->
     <div id="intro">
         <h1>{{site.title}}</h1>
-        <h2>About Front End</h2>
-        <p>Massively is an HTML5 website theme designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a
-                href="https://html5up.net">HTML5 UP</a><br/>
-            and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>. Jekyll
-            integration by <a href="https://somiibo.com">Somiibo</a></p>
+        <h3><a href="https://github.com/mdjzhuhang/mdjzhuhang.github.io">github地址</a></h3>
+        <p>Plant your garden and decorate your own soul, instead of waiting for someone to bring you flowers.</p>
         <ul class="actions">
             <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
         </ul>
@@ -68,7 +52,6 @@ changefreq: weekly
                     <span class="date">{{ post.date | date_to_string }}</span>
                     <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</h2>
                 </header>
-                <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt=""/></a>
                 <p>{{ post.excerpt }}</p>
                 <ul class="actions">
                     <li><a href="{{ post.url | absolute_url }}" class="button">Read More</a></li>

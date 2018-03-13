@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: FE notes about back-docs
+title: API & DOCS
 description: blog.
 sitemap:
     priority: 1.0

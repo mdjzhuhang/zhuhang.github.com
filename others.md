@@ -1,6 +1,6 @@
 ---
 layout: others
-title: FE notes
+title: others
 description: blog.
 sitemap:
     priority: 1.0

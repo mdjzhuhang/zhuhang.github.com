@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Git 用法
-date: 2017-10-31
 excerpt: git用法，clone、add、commit、push、.gitignore配置、github操作
 category: tools
 ---

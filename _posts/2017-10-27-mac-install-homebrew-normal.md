@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  Mac上安装homebrew
-date:   2017-11-27
+title:  Mac-安装homebrew
 excerpt: rvm安装ruby时，会自动安装homebrew（osx的软件管理工具），但是下载太慢，总是安装失败，所以先单独安装homebrew，官方安装命令同样失败，所以使用镜像安装
 category: tools
 ---

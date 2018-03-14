@@ -1,7 +1,6 @@
 ---
 layout: post
 title: shell bash
-date: 2017-09-27
 excerpt: Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。<br>Shell 脚本（shell script），是一种为 shell 编写的脚本程序。本文出现的 "shell编程" 都是指 shell 脚本编程，不是指开发 shell 自身。
 category: tools
 ---

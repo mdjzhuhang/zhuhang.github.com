@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  node相关资料
-date:   2017-03-18
+title:  node 收藏
 excerpt: node的require模块及路径，定时器，express的next函数，express与koa对比
 category: backend
 ---

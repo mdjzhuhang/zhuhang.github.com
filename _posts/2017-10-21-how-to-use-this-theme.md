@@ -1,7 +1,6 @@
 ---
 layout: post
 title: The Jekyll Theme!
-date: 2017-10-31
 excerpt: jekyll theme 使用方式
 category: docs
 ---

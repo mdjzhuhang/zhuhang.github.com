@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 常用文档
-date: 2017-04-08
+title: front-end documents
 excerpt: ECMAScript 6 入门，vue官网，webpack官网，react文档
 category: docs
 ---

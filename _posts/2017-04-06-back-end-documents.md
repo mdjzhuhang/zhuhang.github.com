@@ -1,7 +1,6 @@
 ---
 layout: post
 title: back-end documents
-date: 2017-10-31
 excerpt: <a href="http://nodejs.cn/api/">node 文档</a><br><a href="https://www.npmjs.com.cn">npm 官网</a><br><a href="http://www.expressjs.com.cn/guide/routing.html">express 文档</a><br><a href="http://www.runoob.com/mysql/mysql-data-types.html">mysql</a><br>
 category: docs
 ---

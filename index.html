@@ -15,7 +15,6 @@ title: Jekyll Theme - Home Page - Massively
     <!-- Intro -->
     <div id="intro">
         <h1>{{site.title}}</h1>
-        <h3><a href="https://github.com/mdjzhuhang/mdjzhuhang.github.io">github地址</a></h3>
         <p>Plant your garden and decorate your own soul, instead of waiting for someone to bring you flowers.</p>
         <ul class="actions">
             <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
@@ -29,15 +28,11 @@ title: Jekyll Theme - Home Page - Massively
 
     <!-- Nav -->
     <nav id="nav">
-
         {% include nav.html %}
-
-        <ul class="icons">
-            <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span
-                    class="label">Instagram</span></a></li>
-            <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a>
-            </li>
-        </ul>
+        <!--<ul class="icons">-->
+            <!--<li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a>-->
+            <!--</li>-->
+        <!--</ul>-->
     </nav>
 
     <!-- Main -->
@@ -45,8 +40,8 @@ title: Jekyll Theme - Home Page - Massively
 
         <!-- Posts -->
         <section class="posts">
-            {% for post in site.posts limit:3 %}
-            {% assign mod3 = forloop.index | modulo: 3 %}
+            {% for post in site.posts limit:6 %}
+            {% assign mod3 = forloop.index | modulo: 6 %}
             <article>
                 <header>
                     <span class="date">{{ post.date | date_to_string }}</span>

@@ -1,14 +1,13 @@
 ---
 layout: post
-title:  javascript 收藏
-excerpt: to be conyinued… <br>常见的js错误, 错误处理和堆栈追踪，私有变量，隐式转换，原生JS数据绑定，代理和反射，ES6十大特性，闭包
+title:  js collection
+excerpt: to be continued… <br>常见的js错误, 错误处理和堆栈追踪，私有变量，隐式转换，原生JS数据绑定，代理和反射，ES6十大特性，闭包
 category: frontend
 ---
 
 - [10种最常见的Javascript错误](https://elevenbeans.github.io/2018/02/05/top-10-javascript-errors/)
 
 各种未定义，空对象，跨域，死循环
-
 
 - [JavaScript错误处理和堆栈追踪](https://github.com/dwqs/blog/issues/49)
 

@@ -76,3 +76,26 @@ SSE：单向通道，文本协议（通常使用UTF-8编码）
 
 
 [SSE：使用 HTTP 做数据推送应用](https://www.v2ex.com/t/379577)
+
+
+#### socket.io
+
+Socket.io将Websocket和轮询（Polling）机制以及其它的实时通信方式封装成了通用的接口，并且在服务端实现了这些实时机制的相应代码。也就是说，Websocket仅仅是Socket.io实现实时通信的一个子集。
+
+```
+// 建立一个socket连接
+var socket = io(“ws://103.31.201.154:5555”);
+// 监听服务消息
+socket.on('msg',function(data){
+    socket.emit('msg', {rp:"fine,thank you"}); //向服务器发送消息
+    console.log(data);
+});
+socket.on(“String”,function(data)) 监听服务端发送的消息 Sting参数与服务端emit第一个参数相同
+// 监听socket断开与重连。
+socket.on('disconnect', function() {
+    console.log("与服务其断开");
+});
+socket.on('reconnect', function() {
+    console.log("重新连接到服务器");
+});
+```

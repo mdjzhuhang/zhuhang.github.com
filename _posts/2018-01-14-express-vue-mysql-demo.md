@@ -34,3 +34,10 @@ category: demos
 
 #### back-end
 使用 express，链接 mysql 数据库
+
+
+#### axios
+
+axios 是通过 promise 实现对 ajax 技术的一种封装，就像 jQuery 实现ajax封装一样。
+
+ajax 技术实现了网页的局部数据刷新，axios 实现了对ajax的封装。axios是ajax，ajax不只是axios。

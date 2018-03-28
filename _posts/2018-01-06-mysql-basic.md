@@ -1,12 +1,12 @@
 ---
 layout: post
 title: mysql basic
-excerpt: 下载 <a href=“https://dev.mysql.com/downloads/”>MySQL Community Server</a>，安装、配置、基本操作、语法
+excerpt: 下载 <a href=“https://dev.mysql.com/downloads/”>MySQL Community Server</a>，安装、配置、基本操作、语法、锁、事物
 category: backend
 ---
 
 
-## 下载
+### 下载
 
 下载 MySQL Community Server
 
@@ -26,7 +26,7 @@ category: backend
 
 - Compressed Tar 的安装请自行查找资料
 
-## 安装
+### 安装
 
 下载完成后，双击pkg文件安装，一路继续，标准安装，占用1.17GB。
 
@@ -34,7 +34,7 @@ category: backend
 
 `2018-01-05T02:29:54.982655Z 1 [Note] A temporary password is generated for root@localhost: @@@@`
 
-## 配置
+### 配置
 
 1、进入系统偏好设置
 
@@ -61,7 +61,7 @@ $ vim ~/.bash_profile
 $ source ~/.bash_profile
 ```
 
-## 操作
+### 操作
 
 #### 登录
 ```
@@ -83,7 +83,7 @@ mysql的配置文件
 
 show variables like 'datadir%'”
 
-## mysql语法
+### mysql 语法
 
 ### mysqladmin
 - `creat XXX` 创建数据库
@@ -120,3 +120,22 @@ mysql> \. d:\pr_stat_agent.sql
 Query OK, 0 rows affected (0.00 sec)   
 ```
 
+### mysql 锁、事务
+
+在使用SQL时，大都会遇到这样的问题，你Update一条记录时，需要通过Select来检索出其值或条件，然后在通过这个值来执行修改操作。
+
+但当以上操作放到多线程中并发处理时会出现问题：某线程select了一条记录但还没来得及update时，另一个线程仍然可能会进来select到同一条记录。
+
+一般解决办法就是使用锁和事物的联合机制
+
+例：
+```
+BEGIN TRAN
+
+SELECT * FROM table WITH(TABLOCKX) 
+// 或
+SELECT * FROM table WITH(UPDLOCK, READPAST) 
+
+UPDATE ....
+COMMIT TRAN
+```

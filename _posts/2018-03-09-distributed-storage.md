@@ -49,3 +49,6 @@ category: others
 
 Windows的文件系统往往是“串行”的，而linux的文件系统是“并行”的。
 
+
+[DAS、SAN和NAS三种服务器存储方式](http://blog.csdn.net/fgf00/article/details/52592651)
+

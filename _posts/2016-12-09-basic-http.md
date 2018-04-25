@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  HTTP 协议
+title:  HTTP 基础知识
 excerpt: http1.0 短时，每一个请求使用一个新的 TCP 连接，一个生命周期就关闭。http1.1 长时，服务端／客户端都可以关闭。http2.0 双工。简单来说https是http的安全版,是使用 TLS/SSL 加密的 HTTP 协议。
 category: frontend
 ---
@@ -101,3 +101,5 @@ TLS/SSL 全称安全传输层协议 Transport Layer Security, 是介于 TCP 和 
 [http 2.0 协议详解](http://blog.csdn.net/zqjflash/article/details/50179235)
 
 [全站 HTTPS 来了](http://www.cnblogs.com/zhuyang/p/5081888.html)
+
+[扒一扒HTTPS网站的内幕](https://blog.wilddog.com/?p=210)

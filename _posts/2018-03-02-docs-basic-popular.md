@@ -1,9 +1,11 @@
 ---
 layout: post
-title: 一些概念、技术入门
+title: 了解概念、技术
 excerpt: to be continued… <br> 一些概念、技术入门。来源：阮一峰的网络日志
 category: docs
 ---
+
+[Ractive.js 框架](https://blog.csdn.net/smq29661318/article/details/50908537?locationNum=3&fps=1)：主旨模板+数据=UI，数据的双向绑定，DOM节点的实时更新，事件处理等。
 
 [Nginx 容器教程](http://www.ruanyifeng.com/blog/2018/02/nginx-docker.html)
 

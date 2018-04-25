@@ -1,7 +1,7 @@
 ---
 layout: post
-title: for循环/setTimeout/Promise
-excerpt: 
+title: for-setTimeout-Promise
+excerpt: Promise 的 then 应当会放到当前 tick 的最后，但是还是在当前 tick 中，setTimeout在下一个tick
 category: frontend
 ---
 
@@ -83,7 +83,7 @@ setTimeout 在定时结束后将传递这个函数放到任务队列里面
 
 因此，应当先输出 5，然后再输出 4 
 
-最后在到下一个 tick，就是 1 
+最后再到下一个 tick，就是 1 
 
 2，3，5，4，1
 

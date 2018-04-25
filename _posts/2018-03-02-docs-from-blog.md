@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 了解概念、技术
-excerpt: to be continued… <br> 一些概念、技术入门。来源：阮一峰的网络日志
+title: 概念、技术了解
+excerpt: to be continued… <br> 一些概念、技术入门。来源：技术博客等
 category: docs
 ---
 

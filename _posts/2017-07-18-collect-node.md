@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  node 收藏
+title:  node 文章收藏
 excerpt: node的require模块及路径，定时器，express的next函数，express与koa对比
 category: backend
 ---

@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  js collection
-excerpt: to be continued… <br>HTTPS加密，错误处理和堆栈追踪，私有变量，数据绑定，隐式转换，数据类型
+title:  js 文章收藏
+excerpt: to be continued… <br>错误处理和堆栈追踪，私有变量，数据绑定，隐式转换，数据类型
 category: frontend
 ---
-
-[HTTPS加密原理](https://www.cnblogs.com/Yfling/p/6670495.html)
-
-[HTTP、SSL/TLS和HTTPS协议的区别与联系](http://www.mahaixiang.cn/internet/1522.html)
 
 [JavaScript的隐形成本](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247485480&amp;idx=1&amp;sn=993c1bc6c1eeefcc60fe23525f92fd61&source=41#wechat_redirect)
 

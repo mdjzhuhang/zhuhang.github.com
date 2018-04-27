@@ -1,9 +1,13 @@
 ---
 layout: post
-title: 概念、技术了解
-excerpt: to be continued… <br> 一些概念、技术入门。来源：技术博客等
+title: 概念、技术入门
+excerpt: to be continued…
 category: docs
 ---
+
+[GraphQL](https://blog.csdn.net/future_challenger/article/details/54773541)：由Facebook开发，用于替换RESTful API。以客户端为中心，是一种查询语言（强类型），允许客户端明确指定它要的是什么，避免了数据后去的冗余或者不足。官网 http://graphql.cn 
+
+[AWS Lambda](https://docs.aws.amazon.com/zh_cn/lambda/latest/dg/welcome.html)：一项计算服务，包括服务器和操作系统维护、容量预置和自动扩展、代码监控和记录。您只需要以 AWS Lambda 支持的一种语言 (目前为 Node.js、Java、C#、Go 和 Python) 提供您的代码
 
 [Ractive.js 框架](https://blog.csdn.net/smq29661318/article/details/50908537?locationNum=3&fps=1)：主旨模板+数据=UI，数据的双向绑定，DOM节点的实时更新，事件处理等。
 

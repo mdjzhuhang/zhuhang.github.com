@@ -34,11 +34,15 @@ HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户�
 
 #### http1.0，1.1，2.0
 
-http1.0 短时，每一个请求使用一个新的 TCP 连接，一个生命周期就关闭
+http 1.0 短时，每一个请求使用一个新的 TCP 连接，一个生命周期就关闭
 
-http1.1 长时，服务端／客户端都可以关闭
+http 1.1 长时，服务端／客户端都可以关闭
 
-http2.0 双工
+http 2.0 双工
+
+HTTP 1.0 首部加上 keep-alive，且请求间隔符合服务端keep-alive的设置时间间隔时，多个ajax用一个连接，否则默认一个请求一个连接。
+
+HTTP 1.1 之后 keep-alive（持久连接）被默认启用，除非在响应中指定connection：close，否则 webserver 会假定所有连接都是持久的。
 
 #### URI，URL，URN
 URI，uniform resource identifier，统一资源标识符，用来唯一的标识一个资源

@@ -5,7 +5,7 @@ excerpt: 使用vue-cli快速构建项目
 category: demos
 ---
 环境要求：已安装node，和vuecli，`npm install --global vue-cli`
-[项目地址](https://github.com/mdjzhuhang/front-end/tree/master/vuecli-blog)
+[To github: ](https://github.com/mdjzhuhang/front-end/tree/master/vuecli-blog)
 
 自动生成项目
 ```

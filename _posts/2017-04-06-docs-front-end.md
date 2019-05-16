@@ -1,7 +1,7 @@
 ---
 layout: post
 title: front-end documents
-excerpt: ECMAScript 6 入门，vue官网，webpack官网，react文档
+excerpt: ECMAScript 6 入门，vue官网，webpack官网，react文档，Angular CLI文档
 category: docs
 ---
 
@@ -11,5 +11,7 @@ category: docs
 
 [webpack 官网](https://doc.webpack-china.org/concepts/)
 
-[react 文档](https://doc.react-china.org/docs/state-and-lifecycle.html)
+[react 文档](https://zh-hans.reactjs.org/tutorial/tutorial.html)
+
+[Angular CLI 文档](https://angular.io/cli)
 

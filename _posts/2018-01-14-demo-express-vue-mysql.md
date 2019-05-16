@@ -5,7 +5,7 @@ excerpt: 使用express，vue-cli, axios, echart，mysql
 category: demos
 ---
 
-[项目地址](https://github.com/mdjzhuhang/front-end/tree/master/page-analisis)
+[To github: ](https://github.com/mdjzhuhang/front-end/tree/master/page-analisis)
 
 #### front-end：
 

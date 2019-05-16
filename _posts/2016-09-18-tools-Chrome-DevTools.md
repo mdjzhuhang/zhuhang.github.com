@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Chrome DevTools
-excerpt:  调试移动设备Brower Page Tabs/WebViews，chrome://inspect（要翻墙），钩选中 Discover USB devices
-Category: tools
+excerpt: 调试移动设备，chrome://inspect（要翻墙），钩选中 Discover USB devices
+category: tools
 ---
 
 #### 实时屏幕投影（Live screencasting）

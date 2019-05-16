@@ -5,7 +5,7 @@ excerpt: 创建node项目步骤，node-xlsx使用demo
 category: demos
 ---
 
-[脚本地址](https://github.com/mdjzhuhang/front-end/tree/master/xlsx-demo)
+[To github: ](https://github.com/mdjzhuhang/front-end/tree/master/xlsx-demo)
 
 使用的 node-xlsx 模块，获取 excel 里的数据，使用js合并数据，再生成新的 excel。
 

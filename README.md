@@ -1,6 +1,6 @@
 ## My FE Notes
 
-前端笔记，收藏的文章，常用文档。使用 jekyll theme massively 模版
+前端笔记，收藏的文章，常用文档。
 
 ### 模版用法
 

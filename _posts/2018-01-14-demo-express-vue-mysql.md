@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  express demo
-excerpt: 使用express，vue-cli, axios, echart，mysql
+excerpt: Use express, vue-cli, axios, echart, mysql, convert csv file to echart.
 category: demos
 ---
 
